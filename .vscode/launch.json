@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      
+    {
+      "name": "Attach by Process ID",
+      "processId": "${command:PickProcess}",
+      "request": "attach",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+        
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug Selenium Test",
+        "program": "/Users/tjonsson/learning/Selenium-test/example.js",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": [
+          "run-script",
+          "mocha example.js"
+        ],
+        "outputCapture": "std",
+        "skipFiles": ["<node_internals>/**"]
+      }
+    ]
+  }
+  
