@@ -37,7 +37,7 @@ describe('Simple Selenium WebDriver Test', function () {
       await homePage.navigateToUrl(url);
       await homePage.clickSignInButton();
       await signinDialog.clickForgotPasswordButton();
-      await forgotPasswordPage.enterEmail(testData.nonExistingEmail);
+      await forgotPasswordPage.enterEmail(testData.alreadyExistingEmail);
       await forgotPasswordPage.clickSendLinkButton();
       let snackBarText = await forgotPasswordPage.getSnackBarText();
       console.log("snackBarText: " + snackBarText);
